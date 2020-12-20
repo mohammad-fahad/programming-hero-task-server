@@ -15,7 +15,7 @@ app.use(cors());
 
 
 
-const uri = "mongodb+srv://todo:todo@cluster0.7xlib.mongodb.net/todo?retryWrites=true&w=majority";
+const uri = "mongodb+srv://todo:todo@cluster0.7xlib.mongodb.net/todo;?retryWrites=true&w=majority";
 
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
