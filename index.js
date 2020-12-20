@@ -13,12 +13,6 @@ app.use(cors());
 
 
 
-const dbInfo = {
-    DB_USER: process.env.DB_USER,
-    DB_PASS: process.env.DB_PASS,
-    DB_NAME: process.env.DB_NAME    
-}
-
 
 
 const uri = "mongodb+srv://todo:todo@cluster0.7xlib.mongodb.net/todo?retryWrites=true&w=majority";
@@ -26,8 +20,8 @@ const uri = "mongodb+srv://todo:todo@cluster0.7xlib.mongodb.net/todo?retryWrites
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
-    const moviesCollections = client.db('todo').collection("movies");
-    const seatsCollections = client.db('todo').collection("seats");
+    const moviesCollections = client.db('todo;').collection("movies");
+    const seatsCollections = client.db('todo;').collection("seats");
     
    
     console.log("Database connected");
