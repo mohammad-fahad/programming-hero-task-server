@@ -26,8 +26,8 @@ const uri = "mongodb+srv://todo:todo@cluster0.7xlib.mongodb.net/todo?retryWrites
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
-    const moviesCollections = client.db(`${dbInfo.DB_NAME}`).collection("movies");
-    const seatsCollections = client.db(`${dbInfo.DB_NAME}`).collection("seats");
+    const moviesCollections = client.db('todo').collection("movies");
+    const seatsCollections = client.db('todo').collection("seats");
     
    
     console.log("Database connected");
